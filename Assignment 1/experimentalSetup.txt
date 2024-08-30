@@ -1,0 +1,18 @@
+Hardware Model : HP HP EliteDesk 800 G8 Tower PC
+Memory : 16.0 GiB
+Processor : 11th Gen Intel® Core™ i5-11500 @ 2.70GHz × 12 
+Graphics : Mesa Intel® Graphics (RKL GT1)
+Disk capacity : 1.0 TB
+
+OS Name : Ubuntu 22.04 LTS
+OS Type : 64-bit
+Gnome Version : 42.0
+Windowing System : Wayland
+
+The timing mechanism used was clock() fuction in cpp which gives
+the CPU time used by the program.
+
+Each experiment was done 3 times and the average was recorded as
+final result.
+
+
