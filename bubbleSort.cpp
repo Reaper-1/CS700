@@ -52,5 +52,16 @@ int main()
          << time_taken << setprecision(5);
     cout << " sec" <<endl << "\n\n"; 
 
+    // ofstream outfile("output.txt");
+    // if (!outfile) {
+    //     cerr << "Error opening file for reading!" << endl;
+    //     return 1;
+    // }
+    // for (int i=0; i<N; i++) {
+    //     element = arr[i];
+    //     outfile << element <<endl;       
+    // }
+    // outfile.close();
+
     return 0;
 }

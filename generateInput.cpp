@@ -35,7 +35,7 @@ int main() {
             }
             break;
         case 3:
-            start = N*10;
+            start = N*50;
             for(int i=0; i<N; i++) {
                 start -= rand()%100;
                 outFile << start <<endl;
