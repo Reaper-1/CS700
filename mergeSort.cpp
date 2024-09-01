@@ -2,19 +2,15 @@
 using namespace std;
 
 void merge(int arr[], int left, int mid, int right) {
-    // Calculate the sizes of the two subarrays
     int n1 = mid - left + 1;
     int n2 = right - mid;
 
-    // Create temporary arrays for the two subarrays
     int* leftArray = new int[n1];
     int* rightArray = new int[n2];
 
-    // Copy data to temporary arrays
     std::copy(arr + left, arr + mid + 1, leftArray);
     std::copy(arr + mid + 1, arr + right + 1, rightArray);
 
-    // Merge the temporary arrays back into the original array
     int i = 0, j = 0, k = left;
 
     while (i < n1 && j < n2) {
@@ -25,32 +21,25 @@ void merge(int arr[], int left, int mid, int right) {
         }
     }
 
-    // Copy remaining elements of leftArray, if any
     while (i < n1) {
         arr[k++] = leftArray[i++];
     }
 
-    // Copy remaining elements of rightArray, if any
     while (j < n2) {
         arr[k++] = rightArray[j++];
     }
 
-    // Clean up temporary arrays
     delete[] leftArray;
     delete[] rightArray;
 }
 
-// Recursive Merge Sort function
 void mergeSort(int arr[], int left, int right) {
     if (left < right) {
-        // Find the middle point
         int mid = left + (right - left) / 2;
 
-        // Recursively sort the first and second halves
         mergeSort(arr, left, mid);
         mergeSort(arr, mid + 1, right);
 
-        // Merge the sorted halves
         merge(arr, left, mid, right);
     }
 }
