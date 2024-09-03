@@ -33,23 +33,23 @@ def plot_multiple_lines(df, x_column, y_columns, sheet_name):
         
         x = df[x_column]
         y = df[y_column]
-
+  
         plt.plot(x, y, marker='o', linestyle='-', label=y_column)
 
     plt.xlabel(x_column)
     plt.ylabel("Execution time in seconds")
-    plt.title(sheet_name+f' case of different sorting algorithms')
+    plt.title(sheet_name+f' case of different Quick sort algorithms')
     plt.grid(True)
     plt.legend()
     plt.show()
 
 # Example usage
 
-file_path = Path("CS700/Assignment 1/Run times/allSorts.ods")
-sheet_name = 'Average'
+file_path = Path("Run times/quickSorts.ods")
+sheet_name = 'Worst'
 x_column = 'Input size'
-# y_columns = ['First element as pivot', 'Random element as pivot', 'Median of first, middle and last element as pivot']
-y_columns = ['Bubble Sort', 'Insertion Sort', 'Merge Sort', 'Quick Sort', 'Heap Sort', 'Radix Sort']
+y_columns = [ 'Random element as pivot', 'Median of first, middle and last element as pivot']
+# y_columns = ['Merge Sort', 'Heap Sort', 'Radix Sort']
 
 df = read_ods_to_dataframe(file_path, sheet_name)
 if df is not None:
