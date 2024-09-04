@@ -45,11 +45,11 @@ def plot_multiple_lines(df, x_column, y_columns, sheet_name):
 
 # Example usage
 
-file_path = Path("Run times/quickSorts.ods")
-sheet_name = 'Worst'
+file_path = Path("Run times/allSorts.ods")
+sheet_name = 'Best'
 x_column = 'Input size'
-y_columns = [ 'Random element as pivot', 'Median of first, middle and last element as pivot']
-# y_columns = ['Merge Sort', 'Heap Sort', 'Radix Sort']
+# y_columns = [ 'Random element as pivot', 'Median of first, middle and last element as pivot']
+y_columns = ['Bubble Sort','Insertion Sort', 'Quick Sort', 'Merge Sort', 'Radix Sort']
 
 df = read_ods_to_dataframe(file_path, sheet_name)
 if df is not None:
